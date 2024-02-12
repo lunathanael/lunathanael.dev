@@ -1,0 +1,125 @@
+---
+title: Mancala Console
+description: Mancala console game implemented using structs and multi-file compilation. Fast evaluation combined with strong Alpha-Beta search AI engine.
+date: "2023-06-19"
+repository: lunathanael/Mancala-console
+---
+
+
+# Mancala-console
+
+The board game of Mancala is implemented in a command line interface. Supports human interface, min-max algorithm, and alpha-beta pruning.
+
+## Installation
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/lunathanael/Klondike.git
+```
+
+The project was developed using C++11 and compiled using Make. Compile using the commands below:
+```bash
+make
+make release
+```
+
+## Strength
+The Alpha Beta engine can outperform most human opponents.
+Results for Perft-test of depth 10:
+
+<img width="310" alt="image" src="https://github.com/lunathanael/Mancala-console/assets/68858103/6d0c9bc2-470e-48dd-a7ef-cca4ec5981ac"/>
+
+## Usage
+The syntax for the available functions can be found in the headers. To start a game:
+```C++
+GAMESTATE gamestate;
+start_game(&gamestate);
+```
+The game loop function requires a reference to the two engines and optional parameters.
+``` c++
+int game_loop(
+  GAMESTATE* gamestate, 
+  int (*player_a)(GAMESTATE* gs, int),
+  int (*player_b)(GAMESTATE* gs, int), 
+  bool print_output = false, 
+  int opt_A = -1, 
+  int opt_B = -1
+  );
+```
+
+## Console Commands 
+
+**quit** - exits the console loop and closes the application.\
+
+**newgame** - starts a new game.\
+
+**perft x** - runs a perft test with depth x.\
+
+**d** - displays the current board state.\
+
+**help** - displays a help menu for the hole locations.\
+
+**game** - starts a game with engines given and optional parameters.\
+
+### Example 
+``` bash
+game eng1 eng2 print_output opt1 opt2
+game 3 3 1 16 16
+```
+### Engine indexes:
+
+```c++
+...
+enum ENGINES
+{
+  HUMAN_PLAYER = 0, RANDOM_PLAYER = 1, MIN_MAX_PLAYER = 2, ALPHA_BETA_PLAYER = 3
+}
+...
+```
+
+**simulate** - simulates a number of games with given parameters.
+``` bash
+simulate eng1 eng2 number_of_games opt1 opt2
+simulate 3 3 100 16 16
+```
+
+**board** - parses a board string.
+```bash
+board 4 4 4 4 4 4 0 4 4 4 4 4 4 0 0
+```
+
+For human moves, input the index number of the hole selected. For help on indexing, reference the `help` command.
+
+
+## Options
+The rules for the game are defined in the `defs.h` header file, most settings can be changed without issue.
+
+```c++
+#define NUMBER_OF_HOUSES_PER_SIDE 6
+#define NUMBER_OF_PLAYERS 2
+#define STARTING_SEEDS_PER_HOUSE 4
+static constexpr int ALLOW_CAPTURES = 1;
+static constexpr int CAPTURE_BOTH = 1;
+static constexpr int CAPTURE_ON_ONE_CYCLE = 0; // wtf?
+static constexpr int ALLOW_RELAY_SOWING = 0;
+static constexpr int ALLOW_MULTIPLE_LAPS = 1;
+
+static constexpr int NUMBER_OF_TOTAL_HOUSES = (2 * NUMBER_OF_HOUSES_PER_SIDE);
+static constexpr int NUMBER_OF_TOTAL_HOLES = (NUMBER_OF_TOTAL_HOUSES + NUMBER_OF_PLAYERS);
+static constexpr int TOTAL_SEEDS_COUNT = (NUMBER_OF_TOTAL_HOUSES * STARTING_SEEDS_PER_HOUSE);
+
+static constexpr int PLAYER_TO_STORE_INDEX[2] = { 6, 13 };
+static constexpr int A_HOLE_RANGE[6] = { 0, 1, 2, 3, 4, 5};
+static constexpr int B_HOLE_RANGE[6] = { 7, 8, 9, 10, 11, 12 };
+...
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
