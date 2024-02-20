@@ -44,22 +44,22 @@ export default function Home() {
           >
             lunathanael.dev
           </Link> for my portfolio. */}
-          I'm developing a{" "}
+          I'm exploring Reinforcement Learning in{" "}
           <Link
             target="_blank"
-            href="https://github.com/lunathanael/visualizing-sorting"
+            href="https://supercell.com/en/games/clashroyale/"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Sorter Visualizer
+            Clash Royale
           </Link>
           {" with "}
           <Link
             target="_blank"
-            href="https://eggsontoast1672.github.io/"
+            href="https://www.msuaiclub.com/"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Paul Zupan
-          </Link> in C++.
+            MSU AI Club
+          </Link> in Python.
         </h2>
       </div>
 
