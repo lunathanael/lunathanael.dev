@@ -8,6 +8,17 @@ import GameOverScreen from './gameover';
 
 import introImage from '../../../public/seventeen/introImage.jpg';
 import q1Image from '../../../public/seventeen/q1.png';
+import q2Image from '../../../public/seventeen/q2.jpg';
+import q3Image from '../../../public/seventeen/q3.jpg';
+import q4Image from '../../../public/seventeen/q4.jpg';
+import q5Image from '../../../public/seventeen/q5.jpg';
+import q6Image from '../../../public/seventeen/q6.png';
+import q7Image from '../../../public/seventeen/q7.jpg';
+import q8Image from '../../../public/seventeen/q8.png';
+import q9Image from '../../../public/seventeen/q9.jpg';
+import q10Image from '../../../public/seventeen/q10.jpg';
+import q11Image from '../../../public/seventeen/q11.jpg';
+import q12Image from '../../../public/seventeen/q12.jpg';
 
 interface Question {
   question: string;
@@ -25,33 +36,69 @@ const questions: Question[] = [
   },
   {
     question: "In an interview, Wonwoo admitted he wrote his part while thinking about Mingyu for what song?",
-    image: q1Image,
+    image: q2Image,
     options: ["Aju nice", "Clap", "Still lonely", "Fronting"],
     answer: "Fronting",
   },
   {
     question: "What is Hoshi's nickname?",
-    image: q1Image,
+    image: q3Image,
     options: ["neon sneakers", "10 hour 10 minute", "star", "flower boy"],
     answer: "10 hour 10 minute",
   },
   {
     question: "When was 호시 born??!?!?!?!?!",
-    image: q1Image,
+    image: q4Image,
     options: ["06.15", "07.13", "06.13", "06.25"],
     answer: "06.15",
   },
   {
     question: "Which team is Hoshi a leader of?!?! Could be tricky",
-    image: q1Image,
+    image: q5Image,
     options: ["SVT LEADERS", "SVT BSS", "Performance Team", "Vocal Team", "Hip-Hop Team"],
     answer: "Performance Team",
   },
   {
     question: "How many studio albums has SEVENTEEN RELEASED!?!!?!",
-    image: q1Image,
+    image: q6Image,
     options: ["7", "4", "3", "6"],
     answer: "4",
+  },
+  {
+    question: "Time to ask some questions about Youbo?!",
+    image: q7Image,
+    options: ["yes", "yes"],
+    answer: "yes",
+  },
+  {
+    question: "What's the answer to this question?",
+    image: q8Image,
+    options: ["Could be so", "maybe", "possibly", "yes", "no"],
+    answer: "Could be so",
+  },
+  {
+    question: "Is ellen hungry!?",
+    image: q9Image,
+    options: ["Yes", "maybe", "No", "I'm going to eat you", "grumpy"],
+    answer: "I'm going to eat you",
+  },
+  {
+    question: "What does yobo like to do?",
+    image: q10Image,
+    options: ["Listen to music", "Sing", "Dance", "Talk to Stinky goober", "Pick nose"],
+    answer: "Talk to Stinky goober",
+  },
+  {
+    question: "Does Nate love Yuna?",
+    image: q11Image,
+    options: ["Yes", "Yes", "Yes", "Yes", "Yes"],
+    answer: "Yes",
+  },
+  {
+    question: "What was Her favorite pokemon?",
+    image: q12Image,
+    options: ["I dont remember name :(", "Pikachu", "Nidoking❤️", "Stinkbug", "Stunfisk"],
+    answer: "Nidoking❤️",
   },
 ];
 
@@ -100,9 +147,9 @@ const Quiz = () => {
   if (showIntro) {
     return (
       <div className="flex flex-col items-center justify-center p-4">
-        <h1 className="text-2xl font-bold mb-2">Welcome to the 여보 quiz!!!!</h1>
+        <h1 className="text-2xl font-bold mb-2">여보!! Welcome to 13 + 3 + 1 = 17 quiz!!!!</h1>
         <Image src={introImage} alt="Introduction Image" width={600} height={400} />
-        <p className="text-lg mb-4">HI 여보여보여보, are you ready for the super duper hard quiz?</p>
+        <p className="text-lg mb-4">HI 여보여보여보, are you ready for the super duper hard svntn quiz?</p>
         <button
           className="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setShowIntro(false)}
