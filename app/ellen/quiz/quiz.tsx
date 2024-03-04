@@ -24,10 +24,34 @@ const questions: Question[] = [
     answer: "Say the Name!",
   },
   {
-    question: "Which is the largest ocean?",
+    question: "In an interview, Wonwoo admitted he wrote his part while thinking about Mingyu for what song?",
     image: q1Image,
-    options: ["Atlantic", "Indian", "Arctic", "Pacific"],
-    answer: "Pacific",
+    options: ["Aju nice", "Clap", "Still lonely", "Fronting"],
+    answer: "Fronting",
+  },
+  {
+    question: "What is Hoshi's nickname?",
+    image: q1Image,
+    options: ["neon sneakers", "10 hour 10 minute", "star", "flower boy"],
+    answer: "10 hour 10 minute",
+  },
+  {
+    question: "When was 호시 born??!?!?!?!?!",
+    image: q1Image,
+    options: ["06.15", "07.13", "06.13", "06.25"],
+    answer: "06.15",
+  },
+  {
+    question: "Which team is Hoshi a leader of?!?! Could be tricky",
+    image: q1Image,
+    options: ["SVT LEADERS", "SVT BSS", "Performance Team", "Vocal Team", "Hip-Hop Team"],
+    answer: "Performance Team",
+  },
+  {
+    question: "How many studio albums has SEVENTEEN RELEASED!?!!?!",
+    image: q1Image,
+    options: ["7", "4", "3", "6"],
+    answer: "4",
   },
 ];
 
