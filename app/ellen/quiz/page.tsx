@@ -1,4 +1,4 @@
-import Quiz from './quiz'; // Adjust the path as necessary
+import Quiz from './quiz';
 
 export default function Home() {
   return (

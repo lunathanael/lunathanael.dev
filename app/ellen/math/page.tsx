@@ -41,7 +41,6 @@ const MathRizz = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
   };
 
-  // Function to go to the previous text
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + texts.length) % texts.length);
   };

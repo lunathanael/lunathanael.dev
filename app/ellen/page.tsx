@@ -21,12 +21,12 @@ const WelcomePage = () => {
             Math Rizz😎😘
           </button>
         </Link>
-        <Link href="/ellen/math" passHref>
+        <Link href="/ellen/thoughts" passHref>
           <button className="px-6 py-2 bg-green-500 text-white font-bold rounded hover:bg-green-700 transition duration-300">
             Thoughts about yuna🤔❤️‍🔥
           </button>
         </Link>
-        <Link href="/ellen/math" passHref>
+        <Link href="/ellen/poem" passHref>
           <button className="px-6 py-2 bg-green-500 text-white font-bold rounded hover:bg-green-700 transition duration-300">
             Poem for YOBO✍️🥰
           </button>
