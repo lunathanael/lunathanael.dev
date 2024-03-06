@@ -6,19 +6,19 @@ import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import GameOverScreen from './gameover';
 
-import introImage from '../../../public/ellen/quiz1/introImage.jpg';
-import q1Image from '../../../public/ellen/quiz1/q1.png';
-import q2Image from '../../../public/ellen/quiz1/q2.jpg';
-import q3Image from '../../../public/ellen/quiz1/q3.jpg';
-import q4Image from '../../../public/ellen/quiz1/q4.jpg';
-import q5Image from '../../../public/ellen/quiz1/q5.jpg';
-import q6Image from '../../../public/ellen/quiz1/q6.png';
-import q7Image from '../../../public/ellen/quiz1/q7.jpg';
-import q8Image from '../../../public/ellen/quiz1/q8.png';
-import q9Image from '../../../public/ellen/quiz1/q9.jpg';
-import q10Image from '../../../public/ellen/quiz1/q10.jpg';
-import q11Image from '../../../public/ellen/quiz1/q11.jpg';
-import q12Image from '../../../public/ellen/quiz1/q12.jpg';
+import introImage from '../../../public/ellen/quiz2/introImage.jpg';
+import q1Image from '../../../public/ellen/quiz2/q1.jpg';
+import q2Image from '../../../public/ellen/quiz2/q2.jpg';
+import q3Image from '../../../public/ellen/quiz2/q3.jpg';
+import q4Image from '../../../public/ellen/quiz2/q4.jpg';
+import q5Image from '../../../public/ellen/quiz2/q5.jpg';
+import q6Image from '../../../public/ellen/quiz2/q6.jpg';
+import q7Image from '../../../public/ellen/quiz2/q7.jpg';
+import q8Image from '../../../public/ellen/quiz2/q8.jpg';
+import q9Image from '../../../public/ellen/quiz2/q9.jpg';
+import q10Image from '../../../public/ellen/quiz2/q10.jpg';
+import q11Image from '../../../public/ellen/quiz2/q11.jpg';
+import q12Image from '../../../public/ellen/quiz2/q12.jpg';
 
 interface Question {
   question: string;
@@ -151,7 +151,7 @@ const questions: Question[] = [
   {
     question: "In Darl+ing, the line \"I want to know our problem, blood type, or DNA\" mentions associating blood type with...",
     image: q12Image,
-    options: ["BTS",
+    options: ["love",
       "personality characteristics",
       "mental disorders",
       "diseases",
@@ -224,7 +224,7 @@ const Quiz2 = () => {
         return (
           <>
             {question.options.map((option, index) => (
-              <button key={index} onClick={() => {
+              <button className="bg-blue-500 p-2 my-1 text-white font-bold rounded" key={index} onClick={() => {
                 setSelectedAnswers({ ...selectedAnswers, [currentQuestionIndex]: option });
                 setShowFeedback(true); // Show feedback immediately for single-choice
               }}>
@@ -250,7 +250,7 @@ const Quiz2 = () => {
                 <label htmlFor={`option-${index}`}>{option}</label>
               </div>
             ))}
-            <button onClick={handleSubmitAnswer} className="submit-button mt-4" disabled={showFeedback}>
+            <button onClick={handleSubmitAnswer} className="bg-blue-500 p-2 my-1 text-white font-bold rounded submit-button mt-4" disabled={showFeedback}>
               Submit
             </button>
           </>
@@ -268,7 +268,7 @@ const Quiz2 = () => {
             <button
               onClick={handleSubmitAnswer}
               disabled={showFeedback || userTextAnswer.trim() === ''}
-              className="submit-button mt-4"
+              className="submit-button mt-4 bg-blue-500 p-2 my-1 text-white font-bold rounded"
             >
               Submit
             </button>
@@ -316,9 +316,9 @@ const Quiz2 = () => {
   if (showIntro) {
     return (
       <div className="flex flex-col items-center justify-center p-4">
-        <h1 className="text-2xl font-bold mb-2">Quiz Introduction</h1>
+        <h1 className="text-2xl font-bold mb-2">THIS QUIZ IS SUPER SUPER HARD YOBOBOBOB</h1>
         <Image src={introImage} alt="Introduction Image" width={600} height={400} />
-        <p className="text-lg mb-4">Introductory text.</p>
+        <p className="text-lg mb-4">No cheating stinky ;-;.</p>
         <button
           className="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setShowIntro(false)}
