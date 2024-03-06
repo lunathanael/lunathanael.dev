@@ -283,11 +283,13 @@ const Quiz2 = () => {
     if (question.type === 'multiple') {
       // Ensure comparison is case-insensitive and order-independent for multiple-choice answers
       const sortedUserAnswer = userAnswer instanceof Array ? userAnswer.map(a => a.toLowerCase()).sort() : [];
-      const sortedCorrectAnswer = question.answer.map(a => a.toLowerCase()).sort();
+      const sortedCorrectAnswer = Array.isArray(question.answer) ? question.answer.map(a => a.toLowerCase()).sort() : [];
       return JSON.stringify(sortedUserAnswer) === JSON.stringify(sortedCorrectAnswer);
     } else {
-      // Direct, case-insensitive comparison for single-choice and text answers
-      return userAnswer.toLowerCase() === question.answer.toLowerCase();
+      const normalizedUserAnswer = Array.isArray(userAnswer) ? userAnswer.join("").toLowerCase() : userAnswer.toLowerCase();
+      const normalizedCorrectAnswer = Array.isArray(question.answer) ? question.answer.join("").toLowerCase() : question.answer.toLowerCase();
+
+      return normalizedUserAnswer === normalizedCorrectAnswer;
     }
   };
 
@@ -323,7 +325,7 @@ const Quiz2 = () => {
           className="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setShowIntro(false)}
         >
-          Start Quiz
+          LET ME INNNN!!!!
         </button>
       </div>
     );
