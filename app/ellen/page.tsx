@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import welcomeImage from '../../public/seventeen/welcomeImage.jpg';
+import welcomeImage from '../../public/ellen/welcomeImage.jpg';
 
 const WelcomePage = () => {
   return (

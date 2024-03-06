@@ -6,19 +6,19 @@ import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import GameOverScreen from './gameover';
 
-import introImage from '../../../public/seventeen/introImage.jpg';
-import q1Image from '../../../public/seventeen/q1.png';
-import q2Image from '../../../public/seventeen/q2.jpg';
-import q3Image from '../../../public/seventeen/q3.jpg';
-import q4Image from '../../../public/seventeen/q4.jpg';
-import q5Image from '../../../public/seventeen/q5.jpg';
-import q6Image from '../../../public/seventeen/q6.png';
-import q7Image from '../../../public/seventeen/q7.jpg';
-import q8Image from '../../../public/seventeen/q8.png';
-import q9Image from '../../../public/seventeen/q9.jpg';
-import q10Image from '../../../public/seventeen/q10.jpg';
-import q11Image from '../../../public/seventeen/q11.jpg';
-import q12Image from '../../../public/seventeen/q12.jpg';
+import introImage from '../../../public/ellen/quiz1/introImage.jpg';
+import q1Image from '../../../public/ellen/quiz1/q1.png';
+import q2Image from '../../../public/ellen/quiz1/q2.jpg';
+import q3Image from '../../../public/ellen/quiz1/q3.jpg';
+import q4Image from '../../../public/ellen/quiz1/q4.jpg';
+import q5Image from '../../../public/ellen/quiz1/q5.jpg';
+import q6Image from '../../../public/ellen/quiz1/q6.png';
+import q7Image from '../../../public/ellen/quiz1/q7.jpg';
+import q8Image from '../../../public/ellen/quiz1/q8.png';
+import q9Image from '../../../public/ellen/quiz1/q9.jpg';
+import q10Image from '../../../public/ellen/quiz1/q10.jpg';
+import q11Image from '../../../public/ellen/quiz1/q11.jpg';
+import q12Image from '../../../public/ellen/quiz1/q12.jpg';
 
 interface Question {
   question: string;
@@ -102,7 +102,7 @@ const questions: Question[] = [
   },
 ];
 
-const Quiz = () => {
+const Quiz1 = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: string }>({});
   const [showFeedback, setShowFeedback] = useState<boolean>(false);
@@ -154,7 +154,7 @@ const Quiz = () => {
           className="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setShowIntro(false)}
         >
-          Yes!!
+          Too easy!
         </button>
       </div>
     );
@@ -199,4 +199,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default Quiz1;

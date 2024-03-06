@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import gameoverImage from '../../../public/seventeen/gameoverImage.png';
+import gameoverImage from '../../../public/ellen/quiz1/gameoverImage.png';
 
 interface GameOverScreenProps {
     percentageCorrect: number;
