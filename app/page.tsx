@@ -44,22 +44,27 @@ export default function Home() {
           >
             lunathanael.dev
           </Link> for my portfolio. */}
-          I'm exploring Reinforcement Learning in{" "}
+          Current SDE CO-OP
+          {" @ "}
           <Link
             target="_blank"
-            href="https://supercell.com/en/games/clashroyale/"
+            href="https://www.americanbatterysolutions.com/"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Clash Royale
-          </Link>
-          {" with "}
+            American Battery Solutions
+          </Link> on Website Development, Machine Learning, and Data Science in
+          {" "}
           <Link
             target="_blank"
-            href="https://www.msuaiclub.com/"
+            href="https://dash.plotly.com/"
             className="underline duration-500 hover:text-zinc-300"
-          >
-            MSU AI Club
-          </Link> in Python.
+          >Dash</Link>
+          {" and "}
+          <Link
+            target="_blank"
+            href="https://www.python.org/"
+            className="underline duration-500 hover:text-zinc-300"
+          >Python.</Link>
         </h2>
       </div>
       
