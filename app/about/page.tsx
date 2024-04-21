@@ -123,27 +123,19 @@ export default async function AboutPage() {
                     strengths for various computational challenges.
                 </p>
             </div>
-            <a 
-                className="flex flex-col group w-48 hover:shadow-xl transition focus:ring ring-opacity-50 ring-blue-500 rounded-md text-zinc-100" 
-                href="https://leetcode.com/lunathanael/" 
-                target="_blank" 
-                rel="noreferrer">
-                    <div className="border border-blue-500 group-hover:border-blue-600 rounded-t-md py-1 lg:py-1.5 bg-blue-500 group-hover:bg-blue-600 transition text-lg md:text-xl lg:text-2xl">
-                        <Image 
-                            src="https://www.google.com/s2/favicons?domain=leetcode.com" 
-                            className="inline mx-2 md:mx-2.5 lg:mx-3"
-                            width={28}
-                            height={28}
-                            style={{ verticalAlign: '-5px' }}
-                            alt="LeetCode"/>
-                        LeetCode
-                    </div>
-                    <div className="flex-1 border border-blue-500 group-hover:border-blue-600 rounded-b-md px-1.5 md:px-2 lg:px-2.5 py-1 md:py-1.5 lg:py-2">
-                        Max rating: 1897<br/>
-                        6 Contests <span className="hidden sm:inline"> Attended</span><br/>
-                        513 Problems<span className="hidden sm:inline"> Solved</span><br/>
-                    </div>
-                </a>
+
+            <div className="flex justify-center items-start gap-10">
+                <div className="flex flex-col items-center w-full max-w-sm">
+                    <img src="https://leetcard.jacoblin.cool/lunathanael?theme=dark&font=Ubuntu%20Mono&ext=contest" alt="LeetCode Stats" className="w-full" />
+                </div>
+                <div className="flex flex-col items-center w-full max-w-sm gap-5">
+                    <img src="https://github-readme-stats.vercel.app/api?username=lunathanael&theme=github_dark" alt="GitHub Stats" className="w-full" />
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lunathanael&layout=compact&theme=github_dark" alt="Most Used Languages" className="w-full" />
+                </div>
+            </div>
+
+
+
             <ResumeFooter/>
         </div>
     </div>
