@@ -51,7 +51,7 @@ export default async function AboutPage() {
                 </h2>
                 <p className="mt-4 text-zinc-400">
                     Welcome to my personal journey in software development! I'm an 18-year-old enthusiast from Michigan, 
-                    currently diving deep into Computer Science as a Freshman at MSU. In the digital realm, you might encounter me as lunathanael, 
+                    currently diving deep into Computer Science & Math at the University of Michigan. In the digital realm, you might encounter me as lunathanael, 
                     a username that's become a part of my identity in this fascinating world of technology.
                 </p>
 
