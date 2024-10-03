@@ -36,35 +36,7 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          {/* I'm building{" "}
-          <Link
-            target="_blank"
-            href="https://lunathanael.dev"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            lunathanael.dev
-          </Link> for my portfolio. */}
-          Current SDE CO-OP
-          {" @ "}
-          <Link
-            target="_blank"
-            href="https://www.americanbatterysolutions.com/"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            American Battery Solutions
-          </Link> on Website Development, Machine Learning, and Data Science in
-          {" "}
-          <Link
-            target="_blank"
-            href="https://dash.plotly.com/"
-            className="underline duration-500 hover:text-zinc-300"
-          >Dash</Link>
-          {" and "}
-          <Link
-            target="_blank"
-            href="https://www.python.org/"
-            className="underline duration-500 hover:text-zinc-300"
-          >Python.</Link>
+          CTO @ <Link href="https://www.linkedin.com/company/letspark/about/" className="underline duration-500 hover:text-zinc-300">LetsPark</Link>
         </h2>
       </div>
       
