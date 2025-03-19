@@ -42,7 +42,7 @@ export default function Home() {
       
       <div className="fixed bottom-0 left-0 m-4 animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-            <a className="inline-flex items-center leading-tight group" aria-label="View Full Resume" href="/Nathanael_Lu_Resume_2024.pdf">
+            <a className="inline-flex items-center leading-tight group" aria-label="View Full Resume" href="/Nathanael_Lu_Resume_2025.pdf">
               <span>
                   <span className="border-b border-transparent pb-px transition group-hover:border-zinc-300 motion-reduce:transition-none">
                   View Resume
